@@ -25,7 +25,7 @@ public class BasementExtract extends FeatureExtract {
             if (b.getBuilding() != null && b.getBuilding().getFloors() != null
                     && !b.getBuilding().getFloors().isEmpty())
                 for (Floor f : b.getBuilding().getFloors())
-                    if (f.getNumber() == -1) {
+                    if (f.getNumber() <= -1) {
                         String basementFootPrint = layerNames.getLayerName("LAYER_NAME_BLOCK_NAME_PREFIX") + b.getNumber()
                                 + "_"+ layerNames.getLayerName("LAYER_NAME_LEVEL_NAME_PREFIX") + f.getNumber()
                                 + "_"+ layerNames.getLayerName("LAYER_NAME_BSMNT_FOOT_PRINT");
